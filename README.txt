@@ -1,5 +1,5 @@
-#portfolio
+# Portfolio
 My Portfolio with projects and thoughts
 
-#Goals
+# Goals
 Responsible Visually accessible
