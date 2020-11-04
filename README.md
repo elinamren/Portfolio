@@ -3,10 +3,10 @@ My Portfolio with projects and thoughts
 
 
 # Goals
-Responsible 
-Visually accessible
+* Responsible 
+* Visually accessible
 
-JS Modules
-Reusable HTML Templates for Hamburger Menue
-Librarys p5 anime.js
-Publish to github main page
+* JS Modules
+* Reusable HTML Templates for Hamburger Menue
+* Librarys p5 anime.js
+* Publish to github main page
