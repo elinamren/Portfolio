@@ -41,6 +41,17 @@ h4 {
 
 .contact-border-text {
   font-size: 2.2rem;
+  transform: translateX(0%);
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* --- PORTFOLIO GRID --- */
@@ -74,6 +85,7 @@ h4 {
   transform: rotate(90deg);
 }
 
+/* ------- D I V - S O U P ------- */
 .what-soup {
   background-color: #379683;
   width: 75%;
@@ -83,15 +95,161 @@ h4 {
   padding: 1rem;
 }
 
+.soup-title:hover {
+  animation: shake 1s infinite;
+  cursor: pointer;
+}
+
+.bowl {
+  width: 10rem;
+  height: 10rem;
+  background-color: #edf5e1;
+  border: 6px solid #dee0c4;
+  border-radius: 50%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soup {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: transparent;
+  /* animation: fill 5s ease; */
+}
+
+.spoon {
+  margin: 1rem 0;
+}
+
+.spoon-top {
+  background-color: silver;
+  border: 2px solid rgb(182, 181, 181);
+  width: 2rem;
+  height: 3rem;
+  border-radius: 45%;
+}
+
+.spoon-handle {
+  background-color: silver;
+  border: 1px solid rgb(182, 181, 181);
+  width: 0.4rem;
+  height: 7rem;
+  margin: auto;
+}
+
+.tablet {
+  background-color: #379683;
+  margin: auto;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fill {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  25% {
+    width: 1rem;
+    height: 1rem;
+  }
+  50% {
+    width: 2rem;
+    height: 2rem;
+  }
+  75% {
+    width: 3rem;
+    height: 3rem;
+  }
+  100% {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+  75% {
+    transform: translate(4px, -2px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+}
+
 .project1 {
   grid-area: 1 / 8 / span 5 / span 5;
   background-image: url("bg.png");
   background-size: cover;
 }
 
+/* ------- N U M B E R - G A M R ------- */
 .number-game {
   grid-area: 5 / 1 / span 3 / span 3;
   background-color: #5cdb95;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 4rem;
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.start-btn:hover {
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: #05386b;
+  }
+  20% {
+    color: #379683;
+  }
+  40% {
+    color: #edf5e1;
+  }
+  60% {
+    color: #05386b;
+  }
+  80% {
+    color: #edf5e1;
+  }
+  100% {
+    color: #05386b;
+  }
+}
+
+.submit-btn,
+.hidden {
+  display: none;
+}
+
+.number-input {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .circle {
