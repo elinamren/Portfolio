@@ -5,5 +5,163 @@
 }
 
 body {
-  background-color: blue;
+  font-family: "Montserrat", sans-serif;
+  color: #edf5e1;
+  background-color: #5cdb95;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 12rem;
+  margin-top: 4rem;
+}
+h2 {
+  font-size: 2rem;
+  width: 50rem;
+  margin: auto;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+h4 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.hello {
+  height: 92vh;
+  text-align: center;
+}
+
+.contact-border {
+  background-color: #05386b;
+  height: 8vh;
+  padding: 0.5rem;
+}
+
+.contact-border-text {
+  font-size: 2.2rem;
+}
+
+/* --- PORTFOLIO GRID --- */
+
+.portfolio-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 15vh);
+}
+
+.paint {
+  grid-area: 1 / 1 / span 4 / span 3;
+  background-color: #05386b;
+}
+
+.about-and-soup {
+  grid-area: 1 / 4 / span 3 / span 4;
+}
+
+.about {
+  background-color: #8ddcbb;
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  padding: 2.5rem 1rem;
+}
+
+.about-text {
+  transform: rotate(90deg);
+}
+
+.what-soup {
+  background-color: #379683;
+  width: 75%;
+  height: 100%;
+  display: inline-block;
+  float: right;
+  padding: 1rem;
+}
+
+.project1 {
+  grid-area: 1 / 8 / span 5 / span 5;
+  background-image: url("bg.png");
+  background-size: cover;
+}
+
+.number-game {
+  grid-area: 5 / 1 / span 3 / span 3;
+  background-color: #5cdb95;
+}
+
+.circle {
+  grid-area: 4 / 4 / span 4 / span 4;
+  background-color: cadetblue;
+}
+
+.type-something {
+  grid-area: 6 / 8 / span 3 / span 5;
+  background-color: #8ee4af;
+}
+
+.project2 {
+  grid-area: 8 / 1 / span 5 / span 4;
+  background-color: #379683;
+}
+
+.snow {
+  grid-area: 8 / 5 / span 1 / span 3;
+  background-color: #05386b;
+}
+
+.project3 {
+  grid-area: 9 / 5 / span 4 / span 4;
+  background-color: #8ddcbb;
+}
+
+.contact {
+  grid-area: 9 / 9 / span 4 / span 4;
+  background-color: #edf5e1;
+}
+
+.block {
+  padding: 1rem;
+}
+
+.black {
+  color: #05386b;
+}
+
+.triangles {
+  width: 90%;
+  margin: 1rem;
+}
+
+.moon {
+  max-width: 11rem;
+  min-width: 7rem;
+  margin: 3rem 3rem 0rem 3rem;
+}
+
+.bounce {
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolio-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    width: auto;
+  }
+  .soup-title {
+    font-size: 2rem;
+  }
 }
