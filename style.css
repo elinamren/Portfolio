@@ -143,8 +143,9 @@ h4 {
   margin: 3rem 3rem 0rem 3rem;
 }
 
-.bounce {
+.bounce-canvas {
   width: 50%;
+  height: 300px;
 }
 
 @media only screen and (max-width: 600px) {
