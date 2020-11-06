@@ -15,19 +15,23 @@ h1 {
   font-size: 12rem;
   margin-top: 4rem;
 }
+
 h2 {
   font-size: 2rem;
   width: 50rem;
   margin: auto;
 }
+
 h3 {
   text-transform: uppercase;
   font-size: 4rem;
 }
+
 h4 {
   font-size: 3rem;
   text-transform: uppercase;
 }
+
 .hello {
   height: 92vh;
   text-align: center;
@@ -123,6 +127,8 @@ h4 {
   grid-area: 9 / 9 / span 4 / span 4;
   background-color: #edf5e1;
 }
+
+/* -------------------------------------------*/
 
 .block {
   padding: 1rem;
