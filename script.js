@@ -66,3 +66,81 @@ function checkNumber(event) {
   }
   numberGuess.value = "";
 }
+
+// ----- P O P - U P --------//
+
+const projectThreeInfo = {
+  title: "First Website",
+  description: "A website built in HTML and CSS",
+  info:
+    "My first project, A website built in HTML and CSS A website built in HTML and CSS A website built in HTML and CSS A website built in HTML and CSS",
+  link: "https://elinamren.github.io/resume/",
+};
+
+const projectOneInfo = {
+  title: "Good Morning",
+  description: "An interactive website built in Vanilla JavaScript",
+  info:
+    "A morning routine board for kids to in a more fun way finish their tasks",
+  link: "https://elinamren.github.io/goodmorning/",
+};
+
+const projectTwoInfo = {
+  title: "Habit tracker",
+  description: "An Habit Tracker webapp built in Vanilla JavaScript",
+  info:
+    "A habbit tracker web app where you can add your own habits. Mark as planed and done",
+  link: "https://elinamren.github.io/habit-tracker/",
+};
+
+//selector divs
+const projectOne = document.querySelector(".one");
+const projectTwo = document.querySelector(".two");
+const projectThree = document.querySelector(".three");
+
+const popup = document.querySelector(".popup");
+const popupTitle = document.querySelector(".popup-title");
+const popupDescription = document.querySelector(".popup-description");
+const popupInfo = document.querySelector(".popup-info");
+const visitLink = document.querySelector(".visit-link");
+
+const closeButton = document.querySelector(".close-button");
+
+const projects = Array.from(document.querySelectorAll(".project"));
+
+//eventlistener divs connecting arguments to projects
+projects.forEach((project) =>
+  project.addEventListener("click", getProjectInfo)
+);
+closeButton.addEventListener("click", closeProjectInfo);
+
+// functions
+
+function getProjectInfo() {
+  if (this == projectOne) {
+    popupTitle.innerText = projectOneInfo.title;
+    popupDescription.innerText = projectOneInfo.description;
+    popupInfo.innerText = projectOneInfo.info;
+    visitLink.href = projectOneInfo.link;
+    popup.classList.remove("hidden");
+  } else if (this == projectTwo) {
+    popupTitle.innerText = projectTwoInfo.title;
+    popupDescription.innerText = projectTwoInfo.description;
+    popupInfo.innerText = projectTwoInfo.info;
+    visitLink.href = projectTwoInfo.link;
+    popup.classList.remove("hidden");
+  } else if (this == projectThree) {
+    popupTitle.innerText = projectThreeInfo.title;
+    popupDescription.innerText = projectThreeInfo.description;
+    popupInfo.innerText = projectThreeInfo.info;
+    visitLink.href = projectThreeInfo.link;
+    popup.classList.remove("hidden");
+  }
+}
+
+function closeProjectInfo(e) {
+  const item = e.target;
+  if (item.classList[0] === "close-button") {
+    popup.classList.add("hidden");
+  }
+}

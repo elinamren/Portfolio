@@ -13,7 +13,6 @@ body {
 h1 {
   text-transform: uppercase;
   font-size: 12rem;
-  margin-top: 4rem;
 }
 h2 {
   font-size: 2rem;
@@ -28,9 +27,20 @@ h4 {
   font-size: 3rem;
   text-transform: uppercase;
 }
+
+h5 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+  color: #05386b;
+}
 .hello {
   height: 92vh;
   text-align: center;
+  padding-top: 10rem;
 }
 
 .contact-border {
@@ -79,10 +89,12 @@ h4 {
   display: inline-block;
   float: left;
   padding: 2.5rem 1rem;
+  cursor: pointer;
 }
 
 .about-text {
   transform: rotate(90deg);
+  pointer-events: none;
 }
 
 /* ------- D I V - S O U P ------- */
@@ -190,10 +202,11 @@ h4 {
   }
 }
 
-.project1 {
+.one {
   grid-area: 1 / 8 / span 5 / span 5;
   background-image: url("bg.png");
   background-size: cover;
+  cursor: pointer;
 }
 
 /* ------- N U M B E R - G A M R ------- */
@@ -217,23 +230,14 @@ input:focus {
 }
 
 .start-btn:hover {
-  animation: blink 5s infinite;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
   0% {
     color: #05386b;
   }
-  20% {
-    color: #379683;
-  }
-  40% {
-    color: #edf5e1;
-  }
-  60% {
-    color: #05386b;
-  }
-  80% {
+  50% {
     color: #edf5e1;
   }
   100% {
@@ -262,9 +266,10 @@ input:focus {
   background-color: #8ee4af;
 }
 
-.project2 {
+.two {
   grid-area: 8 / 1 / span 5 / span 4;
   background-color: #379683;
+  cursor: pointer;
 }
 
 .snow {
@@ -272,9 +277,10 @@ input:focus {
   background-color: #05386b;
 }
 
-.project3 {
+.three {
   grid-area: 9 / 5 / span 4 / span 4;
   background-color: #8ddcbb;
+  cursor: pointer;
 }
 
 .contact {
@@ -323,4 +329,97 @@ input:focus {
   .soup-title {
     font-size: 2rem;
   }
+}
+
+/* ------- P O P - U P ------- */
+
+.popup {
+  width: 30rem;
+  border: 3px solid #05386b;
+  background-color: #edf5e1;
+  position: absolute;
+  z-index: 10;
+  left: 400px;
+  top: 1000px;
+}
+
+.popup-top {
+  border-bottom: 3px solid #05386b;
+  width: 90%;
+  height: 3rem;
+  display: inline-block;
+  float: left;
+  padding: 0.7rem;
+  color: #05386b;
+}
+
+.popup-close {
+  border-bottom: 3px solid #05386b;
+  border-left: 3px solid #05386b;
+  width: 10%;
+  height: 3rem;
+  display: inline-block;
+  float: right;
+}
+
+.popup-close:hover,
+.close-button:hover {
+  background-color: #05386b;
+  color: #edf5e1;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-title {
+  color: #05386b;
+  font-size: 3rem;
+}
+
+.popup-inner {
+  padding: 2rem 2rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.popup-info {
+  color: #05386b;
+}
+
+hr {
+  color: #05386b;
+  margin-bottom: 2rem;
+  margin-top: 0.3rem;
+}
+
+.visit-link {
+  border: 3px solid #05386b;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #05386b;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.visit-link:hover {
+  background-color: #05386b;
+  color: #edf5e1;
+}
+
+.hidden {
+  display: none;
+}
+
+.circle-frame,
+.snow-frame,
+.bounce-frame {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

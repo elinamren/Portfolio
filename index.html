@@ -10,24 +10,17 @@
     />
 
     <title>Elin Amrén</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-    <script src="sketch.js"></script>
-    <!-- <script src="sketch2.js"></script> -->
   </head>
   <body>
     <section class="hello">
-      <nav class="hamburger-menu">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
       <h1>Hello</h1>
       <h2>Elin Amrén is a Creative Frontend Developer based in Stockholm.</h2>
 
-      <div id="bounce-canvas"></div>
+      <iframe
+        frameborder="0"
+        class="bounce-frame"
+        src="https://editor.p5js.org/elinamren/embed/4MzH1694S"
+      ></iframe>
     </section>
     <div class="contact-border">
       <p class="contact-border-text">
@@ -55,7 +48,7 @@
         </div>
       </div>
 
-      <div class="block project1 black">
+      <div class="block project one black">
         <h3>Project</h3>
         <p>Interactive website in Vanilla JavaScript</p>
       </div>
@@ -68,9 +61,15 @@
           <button class="submit-btn"></button>
         </form>
       </div>
-      <div class="circle" id="circle-canvas"></div>
+      <div class="circle" id="circle-canvas">
+        <iframe
+          class="circle-frame"
+          frameborder="0"
+          src="https://editor.p5js.org/elinamren/embed/iYTszjR-B"
+        ></iframe>
+      </div>
       <div class="block type-something black"><h5>Type something..</h5></div>
-      <div class="block project2">
+      <div class="block project two">
         <img
           src="triangle.png"
           alt="small darkblue triangles"
@@ -79,8 +78,14 @@
         <h3>Project</h3>
         <p>Habit tracker in Vanilla JavaScript</p>
       </div>
-      <div class="block snow"></div>
-      <div class="block project3 black">
+      <div class="snow" id="snow-canvas">
+        <iframe
+          frameborder="0"
+          class="snow-frame"
+          src="https://editor.p5js.org/elinamren/embed/HLmRNCZLo"
+        ></iframe>
+      </div>
+      <div class="block project three black">
         <img src="moon.png" alt="light yellow half moon" class="moon" />
         <h3>Project</h3>
         <p>Personal website in HTML and CSS</p>
@@ -90,6 +95,23 @@
         <p>elinamren[@]hyperisland.se</p>
       </div>
     </section>
+
+    <div class="popup hidden">
+      <div class="popup-top"><h5>Project</h5></div>
+      <div class="popup-close"><button class="close-button">x</button></div>
+      <div class="popup-inner">
+        <h3 class="popup-title">Popup Title</h3>
+        <h6 class="popup-description">A short description of the project</h6>
+        <hr />
+        <p class="popup-info">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet dolorum
+          cupiditate soluta obcaecati porro natus quas repudiandae impedit
+          distinctio, mollitia fugiat suscipit reprehenderit, consequatur
+          voluptates laudantium aut nesciunt consequuntur. Expedita?
+        </p>
+        <a href="#" class="visit-link">Visit Webpage</a>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
