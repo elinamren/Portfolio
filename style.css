@@ -13,7 +13,6 @@ body {
 h1 {
   text-transform: uppercase;
   font-size: 12rem;
-  margin-top: 4rem;
 }
 
 h2 {
@@ -32,9 +31,20 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+  color: #05386b;
+}
+
 .hello {
   height: 92vh;
   text-align: center;
+  padding-top: 10rem;
 }
 
 .contact-border {
@@ -45,6 +55,17 @@ h4 {
 
 .contact-border-text {
   font-size: 2.2rem;
+  transform: translateX(0%);
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* --- PORTFOLIO GRID --- */
@@ -72,12 +93,15 @@ h4 {
   display: inline-block;
   float: left;
   padding: 2.5rem 1rem;
+  cursor: pointer;
 }
 
 .about-text {
   transform: rotate(90deg);
+  pointer-events: none;
 }
 
+/* ------- D I V - S O U P ------- */
 .what-soup {
   background-color: #379683;
   width: 75%;
@@ -87,15 +111,153 @@ h4 {
   padding: 1rem;
 }
 
-.project1 {
+.soup-title:hover {
+  animation: shake 1s infinite;
+  cursor: pointer;
+}
+
+.bowl {
+  width: 10rem;
+  height: 10rem;
+  background-color: #edf5e1;
+  border: 6px solid #dee0c4;
+  border-radius: 50%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soup {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: transparent;
+  /* animation: fill 5s ease; */
+}
+
+.spoon {
+  margin: 1rem 0;
+}
+
+.spoon-top {
+  background-color: silver;
+  border: 2px solid rgb(182, 181, 181);
+  width: 2rem;
+  height: 3rem;
+  border-radius: 45%;
+}
+
+.spoon-handle {
+  background-color: silver;
+  border: 1px solid rgb(182, 181, 181);
+  width: 0.4rem;
+  height: 7rem;
+  margin: auto;
+}
+
+.tablet {
+  background-color: #379683;
+  margin: auto;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fill {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  25% {
+    width: 1rem;
+    height: 1rem;
+  }
+  50% {
+    width: 2rem;
+    height: 2rem;
+  }
+  75% {
+    width: 3rem;
+    height: 3rem;
+  }
+  100% {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+  75% {
+    transform: translate(4px, -2px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+}
+
+.one {
   grid-area: 1 / 8 / span 5 / span 5;
   background-image: url("bg.png");
   background-size: cover;
+  cursor: pointer;
 }
 
+/* ------- N U M B E R - G A M R ------- */
 .number-game {
   grid-area: 5 / 1 / span 3 / span 3;
   background-color: #5cdb95;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 4rem;
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.start-btn:hover {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: #05386b;
+  }
+  50% {
+    color: #edf5e1;
+  }
+  100% {
+    color: #05386b;
+  }
+}
+
+.submit-btn,
+.hidden {
+  display: none;
+}
+
+.number-input {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .circle {
@@ -108,9 +270,10 @@ h4 {
   background-color: #8ee4af;
 }
 
-.project2 {
+.two {
   grid-area: 8 / 1 / span 5 / span 4;
   background-color: #379683;
+  cursor: pointer;
 }
 
 .snow {
@@ -118,9 +281,10 @@ h4 {
   background-color: #05386b;
 }
 
-.project3 {
+.three {
   grid-area: 9 / 5 / span 4 / span 4;
   background-color: #8ddcbb;
+  cursor: pointer;
 }
 
 .contact {
@@ -149,8 +313,9 @@ h4 {
   margin: 3rem 3rem 0rem 3rem;
 }
 
-.bounce {
+.bounce-canvas {
   width: 50%;
+  height: 300px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -170,4 +335,97 @@ h4 {
   .soup-title {
     font-size: 2rem;
   }
+}
+
+/* ------- P O P - U P ------- */
+
+.popup {
+  width: 30rem;
+  border: 3px solid #05386b;
+  background-color: #edf5e1;
+  position: absolute;
+  z-index: 10;
+  left: 400px;
+  top: 1000px;
+}
+
+.popup-top {
+  border-bottom: 3px solid #05386b;
+  width: 90%;
+  height: 3rem;
+  display: inline-block;
+  float: left;
+  padding: 0.7rem;
+  color: #05386b;
+}
+
+.popup-close {
+  border-bottom: 3px solid #05386b;
+  border-left: 3px solid #05386b;
+  width: 10%;
+  height: 3rem;
+  display: inline-block;
+  float: right;
+}
+
+.popup-close:hover,
+.close-button:hover {
+  background-color: #05386b;
+  color: #edf5e1;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-title {
+  color: #05386b;
+  font-size: 3rem;
+}
+
+.popup-inner {
+  padding: 2rem 2rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.popup-info {
+  color: #05386b;
+}
+
+hr {
+  color: #05386b;
+  margin-bottom: 2rem;
+  margin-top: 0.3rem;
+}
+
+.visit-link {
+  border: 3px solid #05386b;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #05386b;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.visit-link:hover {
+  background-color: #05386b;
+  color: #edf5e1;
+}
+
+.hidden {
+  display: none;
+}
+
+.circle-frame,
+.snow-frame,
+.bounce-frame {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
