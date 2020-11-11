@@ -482,4 +482,9 @@ hr {
   .social-links {
     padding-top: 4rem;
   }
+  .popup {
+    width: 22rem;
+    left: 10px;
+    top: 1000px;
+  }
 }
