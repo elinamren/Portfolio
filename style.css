@@ -14,15 +14,18 @@ h1 {
   text-transform: uppercase;
   font-size: 12rem;
 }
+
 h2 {
   font-size: 2rem;
   width: 50rem;
   margin: auto;
 }
+
 h3 {
   text-transform: uppercase;
   font-size: 4rem;
 }
+
 h4 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -228,7 +231,7 @@ a {
   cursor: pointer;
 }
 
-/* ------- N U M B E R - G A M R ------- */
+/* ------- N U M B E R - G A M E ------- */
 .number-game {
   grid-area: 5 / 1 / span 3 / span 3;
   background-color: #5cdb95;
@@ -306,6 +309,8 @@ input:focus {
   grid-area: 9 / 9 / span 4 / span 4;
   background-color: #edf5e1;
 }
+
+/* -------------------------------------------*/
 
 .block {
   padding: 1rem;
