@@ -1,6 +1,8 @@
 # Portfolio
 My Portfolio with projects and thoughts
+
 HTML / CSS / JavaScript / p5
+
 https://elinamren.github.io/Portfolio/
 
 ## Goals
