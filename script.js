@@ -44,7 +44,7 @@ function startGame() {
   numberGuess.classList.remove("hidden");
   theNumber = Math.floor(Math.random() * 10 + 1);
   message.innerText = "";
-  startBtn.innerText = "";
+  // startBtn.innerText = "";
 }
 
 //Functions
@@ -62,7 +62,7 @@ function checkNumber(event) {
     message.innerHTML = `Wrong, you guessed ${numberGuess.value},<br>guess a little bit lower.`;
   } else {
     message.innerHTML =
-      "You have to guess a<br>number between 1 and 10,<br>try again.";
+      "You have to guess a number<br>between 1 and 10, try again.";
   }
   numberGuess.value = "";
 }
@@ -71,31 +71,41 @@ function checkNumber(event) {
 
 const chatInput = document.querySelector(".chat-input");
 const chatBox = document.querySelector(".chat-box");
+const submitButton = document.querySelector(".submit-chat-button");
+
+submitButton.addEventListener("click", addChat);
+const messages = [];
+
+function addChat(event) {
+  event.preventDefault();
+  let myText = chatInput.value;
+  const myChatText = document.createElement("p");
+  myChatText.innerHTML = myText;
+  chatBox.appendChild(myChatText);
+  messages.push(myText);
+  chatInput.value = "";
+
+  console.log(messages);
+  console.log(messages.length);
+
+  let number = messages.length - 1;
+  setTimeout(() => {
+    const botChatText = document.createElement("p");
+    botChatText.classList.add("bot-text");
+    botChatText.innerHTML = replys[number];
+    chatBox.appendChild(botChatText);
+  }, 2000);
+}
+
 const replys = [
   "Hello there!",
   "..well I am good thank you! What about you?",
   "Ok!",
   "I like to dance!",
   "I bet you want to see my big collection of stones! Do you?",
-  "Anyways, have a look https://i.ytimg.com/vi/twL6HhYi5IY/maxresdefault.jpg",
+  'Anyways, have a look <a href="http://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/76/bb/76bb38a2-c7d5-43ef-9952-9050c579a06f/gemstones-from-aorund-the-world.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg">here!</a>',
   "It was nice talking to you! Back to work. Byyyee :)",
 ];
-
-chatInput.addEventListener("click", startChat);
-
-function startChat(event) {
-  event.preventDefault();
-  const replay = chatReply.value;
-  for (i = 0; i < replays.length; i++) {
-    const chatText = document.createElement("p");
-    chatBox.appendChild(chatText);
-    chatText.innerText = "You: " + replay;
-    const chatTextReply = document.createElement("p");
-    chatBox.appendChild(chatTextReply);
-    chatText.innerText = "Bot: " + replays[i];
-    chatInput.value = "";
-  }
-}
 
 // ----- P O P - U P --------//
 
@@ -127,7 +137,7 @@ const aboutMe = {
   title: "Elin Amrén",
   description: "Creative Frontend Developer student at Hyper Island",
   info:
-    "This is Elin, a Front End Developer student at Hyper Island based in Stockholm. She has been working in five different cities and lived in four countrys. She have two kids that like adventures as much as she does. One of her biggest passions is skiing. She have been working as a ski instructor for many years and traveled the world to find the best snow conditions. Recently she found the love of mountain biking. Riding the bike parks or going out in the forest on a bumpy trail breathing the fresh air.",
+    "This is Elin, a Frontend Developer student at Hyper Island based in Stockholm. She has been working in five different cities and lived in four countrys. She have two kids that like adventures as much as she does. One of her biggest passions is skiing. She have been working as a ski instructor for many years and traveled the world to find the best snow conditions. Recently she found the love of mountain biking. Riding the bike parks or going out in the forest on a bumpy trail breathing the fresh air.",
 };
 
 //selector divs
@@ -154,6 +164,7 @@ projects.forEach((project) =>
 closeButton.addEventListener("click", closeProjectInfo);
 
 // functions
+const phoneView = window.matchMedia("(max-width: 700px)");
 
 function getProjectInfo() {
   if (this == projectOne) {
@@ -164,6 +175,13 @@ function getProjectInfo() {
     visitLink.href = projectOneInfo.link;
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
+    if (phoneView.matches) {
+      popup.style.top = "980px";
+      popup.style.left = "5px";
+    } else {
+      popup.style.top = "900px";
+      popup.style.left = "700px";
+    }
   } else if (this == projectTwo) {
     bannerText.innerText = "Project";
     popupTitle.innerText = projectTwoInfo.title;
@@ -172,6 +190,13 @@ function getProjectInfo() {
     visitLink.href = projectTwoInfo.link;
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
+    if (phoneView.matches) {
+      popup.style.top = "2020px";
+      popup.style.left = "5px";
+    } else {
+      popup.style.top = "1600px";
+      popup.style.left = "200px";
+    }
   } else if (this == projectThree) {
     bannerText.innerText = "Project";
     popupTitle.innerText = projectThreeInfo.title;
@@ -180,6 +205,13 @@ function getProjectInfo() {
     visitLink.href = projectThreeInfo.link;
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
+    if (phoneView.matches) {
+      popup.style.top = "2400px";
+      popup.style.left = "5px";
+    } else {
+      popup.style.top = "1600px";
+      popup.style.left = "600px";
+    }
   } else if (this == about) {
     bannerText.innerText = "About";
     popupTitle.innerText = aboutMe.title;
@@ -187,6 +219,13 @@ function getProjectInfo() {
     popupInfo.innerText = aboutMe.info;
     visitLink.classList.add("hidden");
     popup.classList.remove("hidden");
+    if (phoneView.matches) {
+      popup.style.top = "700px";
+      popup.style.left = "5px";
+    } else {
+      popup.style.top = "850px";
+      popup.style.left = "200px";
+    }
   }
 }
 
