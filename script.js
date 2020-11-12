@@ -1,7 +1,7 @@
 // ------- D I V - S O U P ------- //
 // Selectors
 const soups = [
-  { name: "Spinich", color: "#599e54" },
+  { name: "Spinach", color: "#599e54" },
   { name: "Div soup", color: "#d199ff" },
   { name: "Tomato", color: "#db5d3d" },
   { name: "Asparagus", color: "#c3e6ac" },
@@ -67,7 +67,7 @@ function checkNumber(event) {
   numberGuess.value = "";
 }
 
-// ------- C H A T ------- //
+// --------- C H A T --------- //
 
 const chatInput = document.querySelector(".chat-input");
 const chatBox = document.querySelector(".chat-box");
@@ -106,6 +106,7 @@ const replys = [
   'Anyways, have a look <a href="http://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/76/bb/76bb38a2-c7d5-43ef-9952-9050c579a06f/gemstones-from-aorund-the-world.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg">here!</a>',
   "It was nice talking to you! Back to work. Byyyee :)",
 ];
+//--------------------------------------------------//
 
 // ----- P O P - U P --------//
 
@@ -133,26 +134,21 @@ const projectTwoInfo = {
   link: "https://elinamren.github.io/habit-tracker/",
 };
 
-const aboutMe = {
-  title: "Elin Amrén",
-  description: "Creative Frontend Developer student at Hyper Island",
-  info:
-    "This is Elin, a Frontend Developer student at Hyper Island based in Stockholm. She has been working in five different cities and lived in four countrys. She have two kids that like adventures as much as she does. One of her biggest passions is skiing. She have been working as a ski instructor for many years and traveled the world to find the best snow conditions. Recently she found the love of mountain biking. Riding the bike parks or going out in the forest on a bumpy trail breathing the fresh air.",
-};
-
-//selector divs
+//selector project/about
 const projectOne = document.querySelector(".one");
 const projectTwo = document.querySelector(".two");
 const projectThree = document.querySelector(".three");
+const aboutInfo = document.querySelector(".about-box");
+const stars = document.querySelector(".stars");
 const about = document.querySelector(".about");
 
+//selectors inside popup window
 const bannerText = document.querySelector(".banner-text");
 const popup = document.querySelector(".popup");
 const popupTitle = document.querySelector(".popup-title");
 const popupDescription = document.querySelector(".popup-description");
 const popupInfo = document.querySelector(".popup-info");
 const visitLink = document.querySelector(".visit-link");
-
 const closeButton = document.querySelector(".close-button");
 
 const projects = Array.from(document.querySelectorAll(".pop"));
@@ -162,6 +158,7 @@ projects.forEach((project) =>
   project.addEventListener("click", getProjectInfo)
 );
 closeButton.addEventListener("click", closeProjectInfo);
+about.addEventListener("click", getAboutInfo);
 
 // functions
 const phoneView = window.matchMedia("(max-width: 700px)");
@@ -176,7 +173,7 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "980px";
+      popup.style.top = "1400px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "900px";
@@ -191,7 +188,7 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "2020px";
+      popup.style.top = "2470px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "1600px";
@@ -206,25 +203,11 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "2400px";
+      popup.style.top = "2900px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "1600px";
-      popup.style.left = "600px";
-    }
-  } else if (this == about) {
-    bannerText.innerText = "About";
-    popupTitle.innerText = aboutMe.title;
-    popupDescription.innerText = aboutMe.description;
-    popupInfo.innerText = aboutMe.info;
-    visitLink.classList.add("hidden");
-    popup.classList.remove("hidden");
-    if (phoneView.matches) {
-      popup.style.top = "700px";
-      popup.style.left = "5px";
-    } else {
-      popup.style.top = "850px";
-      popup.style.left = "200px";
+      popup.style.left = "450px";
     }
   }
 }
@@ -234,4 +217,9 @@ function closeProjectInfo(e) {
   if (item.classList[0] === "close-button") {
     popup.classList.add("hidden");
   }
+}
+
+function getAboutInfo() {
+  stars.classList.toggle("hidden");
+  aboutInfo.classList.toggle("hidden");
 }

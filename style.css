@@ -42,6 +42,8 @@ a {
   text-decoration: none;
 }
 
+/* ------- H E L L O - S E C T I O N ------- */
+
 .hello {
   height: 92vh;
   text-align: center;
@@ -84,7 +86,7 @@ a {
   }
 }
 
-/* --- PORTFOLIO GRID --- */
+/* ------- PORTFOLIO GRID ------- */
 
 .portfolio-container {
   width: 100%;
@@ -93,52 +95,10 @@ a {
   grid-template-rows: repeat(12, 15vh);
 }
 
-.paint {
+.star-about {
   grid-area: 1 / 1 / span 4 / span 3;
   background-color: #05386b;
   z-index: 10;
-  overflow: hidden;
-}
-
-.pulse {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #edf5e1;
-  cursor: pointer;
-  box-shadow: 0 0 0 #edf5e19a;
-  margin: 1.5rem;
-  display: inline-block;
-}
-
-.pulse:hover {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0.604);
-  }
-  70% {
-    box-shadow: 0 0 0 120px rgba(237, 245, 225, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0);
-  }
-}
-
-.star1 {
-  width: 1.5rem;
-  transition: all 2s ease-in-out;
-}
-.star2 {
-  width: 2rem;
-  transition: all 1s ease-in-out;
-}
-
-.star1:hover,
-.star2:hover {
-  animation: blink 2s linear infinite;
 }
 
 .about-and-soup {
@@ -196,7 +156,7 @@ a {
   height: 8rem;
   border-radius: 50%;
   background-color: transparent;
-  /* animation: fill 5s ease; */
+  animation: fill 4s ease;
 }
 
 .spoon {
@@ -384,6 +344,25 @@ input:focus {
   background-color: #edf5e1;
 }
 
+/* ------- P O R T F O L I O - C O N T E N T ------- */
+
+.stars {
+  width: 90%;
+  padding-top: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0.604);
+  }
+  70% {
+    box-shadow: 0 0 0 120px rgba(237, 245, 225, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0);
+  }
+}
+
 .block {
   padding: 1rem;
 }
@@ -394,12 +373,13 @@ input:focus {
 
 .triangles {
   width: 90%;
-  margin: 1rem;
+  margin: 3rem 1rem;
 }
 
 .moon {
   max-width: 11rem;
   min-width: 7rem;
+  margin-top: 3rem;
 }
 
 .moon-container {
@@ -558,29 +538,38 @@ hr {
     height: 350px;
   }
 
-  .about-and-soup {
-    height: 45vh;
-  }
-
   .about {
     padding: 1rem;
   }
 
   .circle,
-  .one {
+  .one,
+  .about-and-soup {
     height: 45vh;
+  }
+
+  .star-about {
+    height: 65vh;
+  }
+
+  .stars {
+    width: 80%;
+    margin-left: 1rem;
+  }
+
+  .moon,
+  .triangles {
+    margin: 0;
   }
 
   .three {
     height: 42vh;
   }
-  .paint {
-    display: none;
-  }
 
   .type-something {
-    height: 30vh;
+    height: 35vh;
   }
+
   .number-game {
     height: 35vh;
     padding: 1rem;
