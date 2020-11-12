@@ -113,7 +113,7 @@ const projectThreeInfo = {
   title: "First Website",
   description: "A website built in HTML and CSS",
   info:
-    "My first project, A website built in HTML and CSS A website built in HTML and CSS A website built in HTML and CSS A website built in HTML and CSS",
+    "This was our first project. A personal website built in HTML and CSS. I wanted to build a single site with sections with some animations.",
   link: "https://elinamren.github.io/resume/",
 };
 
@@ -121,7 +121,7 @@ const projectOneInfo = {
   title: "Good Morning",
   description: "An interactive website built in Vanilla JavaScript",
   info:
-    "A morning routine board for kids to in a more fun way finish their tasks",
+    "On our second project I did a morning routine board for kids to in a more fun way finish their tasks. This was my first introduction to JavaScript.",
   link: "https://elinamren.github.io/goodmorning/",
 };
 
@@ -129,11 +129,11 @@ const projectTwoInfo = {
   title: "Habit tracker",
   description: "An Habit Tracker webapp built in Vanilla JavaScript",
   info:
-    "A habbit tracker web app where you can add your own habits. Mark as planed and done",
+    "A habbit tracker web app where you can add your own habits. Mark as planed and done. Made by me, Lisa Lee and Saeid.",
   link: "https://elinamren.github.io/habit-tracker/",
 };
 
-//selector project/about
+//selectors project/about
 const projectOne = document.querySelector(".one");
 const projectTwo = document.querySelector(".two");
 const projectThree = document.querySelector(".three");
