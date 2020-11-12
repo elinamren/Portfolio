@@ -14,15 +14,18 @@ h1 {
   text-transform: uppercase;
   font-size: 12rem;
 }
+
 h2 {
   font-size: 2rem;
   width: 50rem;
   margin: auto;
 }
+
 h3 {
   text-transform: uppercase;
   font-size: 4rem;
 }
+
 h4 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -362,6 +365,124 @@ input:focus {
     transform: translate(-2px, 2px) rotate(-2deg);
   }
 }
+
+
+.one {
+  grid-area: 1 / 8 / span 5 / span 5;
+  background-image: url("bg.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* ------- N U M B E R - G A M E ------- */
+.number-game {
+  grid-area: 5 / 1 / span 3 / span 3;
+  background-color: #5cdb95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 6rem;
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.start-btn:hover {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: #05386b;
+  }
+  50% {
+    color: #edf5e1;
+  }
+  100% {
+    color: #05386b;
+  }
+}
+
+.submit-btn,
+.hidden {
+  display: none;
+}
+
+.number-input {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #edf5e1;
+  border: 0;
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+}
+
+.circle {
+  grid-area: 4 / 4 / span 4 / span 4;
+  background-color: cadetblue;
+}
+
+.type-something {
+  grid-area: 6 / 8 / span 3 / span 5;
+  background-color: #8ee4af;
+}
+
+.chat-input {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #05386b;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+::placeholder {
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.bot-text {
+  text-align: right;
+}
+
+.two {
+  grid-area: 8 / 1 / span 5 / span 4;
+  background-color: #379683;
+  cursor: pointer;
+}
+
+.snow {
+  grid-area: 8 / 5 / span 1 / span 3;
+  background-color: #05386b;
+}
+
+.three {
+  grid-area: 9 / 5 / span 4 / span 4;
+  background-color: #8ddcbb;
+  cursor: pointer;
+}
+
+.contact {
+  grid-area: 9 / 9 / span 4 / span 4;
+  background-color: #edf5e1;
+}
+
+/* -------------------------------------------*/
 
 .block {
   padding: 1rem;
