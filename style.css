@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  line-height: 1.3rem;
+}
+
 /* ------- H E L L O - S E C T I O N ------- */
 
 .hello {
@@ -486,7 +490,8 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 85%;
+  width: 100%;
+  padding-right: 2rem;
 }
 
 .fab {
@@ -495,7 +500,12 @@ input:focus {
   padding: 1rem;
 }
 
-.fab:hover {
+.mailto {
+  color: #05386b;
+}
+
+.fab:hover,
+.mailto:hover {
   color: #379683;
 }
 
@@ -516,11 +526,13 @@ input:focus {
   color: #05386b;
 }
 
-.project {
+.project,
+.contact {
   position: relative;
 }
 
-.text-container {
+.text-container,
+.social-links {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -605,16 +617,42 @@ hr {
   display: none;
 }
 
+.hide {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 /* ----PHONE VIEW -------------*/
 
 .iphone {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 1160px) and (min-width: 800px) {
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .soup-title {
+    font-size: 2rem;
+  }
+  .fab {
+    font-size: 3.5rem;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .portfolio-container {
     width: 100%;
     display: flex;
@@ -623,10 +661,12 @@ hr {
 
   h1 {
     font-size: 4.2rem;
+    color: #05386b;
   }
   h2 {
     font-size: 1.2rem;
     width: auto;
+    color: #05386b;
   }
   .soup-title {
     font-size: 2rem;
@@ -667,7 +707,8 @@ hr {
     margin: 0;
   }
 
-  .three {
+  .three,
+  .contact {
     height: 42vh;
   }
 
