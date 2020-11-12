@@ -49,7 +49,7 @@ a {
 }
 
 .bounce-canvas {
-  width: 80%;
+  width: 70%;
   height: 255px;
   margin: auto;
 }
@@ -96,10 +96,54 @@ a {
 .paint {
   grid-area: 1 / 1 / span 4 / span 3;
   background-color: #05386b;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #edf5e1;
+  cursor: pointer;
+  box-shadow: 0 0 0 #edf5e19a;
+  margin: 1.5rem;
+  display: inline-block;
+}
+
+.pulse:hover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0.604);
+  }
+  70% {
+    box-shadow: 0 0 0 120px rgba(237, 245, 225, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 245, 225, 0);
+  }
+}
+
+.star1 {
+  width: 1.5rem;
+  transition: all 2s ease-in-out;
+}
+.star2 {
+  width: 2rem;
+  transition: all 1s ease-in-out;
+}
+
+.star1:hover,
+.star2:hover {
+  animation: blink 2s linear infinite;
 }
 
 .about-and-soup {
   grid-area: 1 / 4 / span 3 / span 4;
+  z-index: 10;
 }
 
 .about {
@@ -124,6 +168,10 @@ a {
   height: 100%;
   float: right;
   padding: 1rem;
+}
+
+.soup-title {
+  font-size: 2.5rem;
 }
 
 .soup-title:hover {
@@ -232,13 +280,18 @@ a {
 .number-game {
   grid-area: 5 / 1 / span 3 / span 3;
   background-color: #5cdb95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem 1rem 1rem;
+  text-align: center;
 }
 
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 6rem;
   color: #05386b;
   font-family: "Montserrat", sans-serif;
 }
@@ -273,6 +326,10 @@ input:focus {
   width: 4rem;
   padding: 0.5rem;
   margin: 0.5rem;
+  background-color: #edf5e1;
+  border: 0;
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
 }
 
 .circle {
@@ -283,6 +340,26 @@ input:focus {
 .type-something {
   grid-area: 6 / 8 / span 3 / span 5;
   background-color: #8ee4af;
+}
+
+.chat-input {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #05386b;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+::placeholder {
+  color: #05386b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.bot-text {
+  text-align: right;
 }
 
 .two {
@@ -323,7 +400,23 @@ input:focus {
 .moon {
   max-width: 11rem;
   min-width: 7rem;
-  margin: 3rem 3rem 0rem 3rem;
+}
+
+.moon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project {
+  position: relative;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 /* ------- P O P - U P ------- */
@@ -433,6 +526,9 @@ hr {
   display: none;
 }
 
+@media only screen and (max-width: 900px) {
+}
+
 @media only screen and (max-width: 600px) {
   .portfolio-container {
     width: 100%;
@@ -459,22 +555,35 @@ hr {
 
   .bounce-canvas {
     width: 95%;
-    height: 400px;
+    height: 350px;
   }
 
-  .about-and-soup,
-  .circle {
-    height: 40vh;
+  .about-and-soup {
+    height: 45vh;
+  }
+
+  .about {
+    padding: 1rem;
+  }
+
+  .circle,
+  .one {
+    height: 45vh;
+  }
+
+  .three {
+    height: 42vh;
   }
   .paint {
     display: none;
   }
-  .one,
+
   .type-something {
     height: 30vh;
   }
   .number-game {
-    height: 20vh;
+    height: 35vh;
+    padding: 1rem;
   }
   .snow {
     height: 115px;
@@ -483,7 +592,7 @@ hr {
     padding-top: 4rem;
   }
   .popup {
-    width: 22rem;
+    width: 95%;
     left: 10px;
     top: 1000px;
   }
