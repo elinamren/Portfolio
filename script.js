@@ -133,7 +133,7 @@ const projectTwoInfo = {
   link: "https://elinamren.github.io/habit-tracker/",
 };
 
-//selector project/about
+//selectors project/about
 const projectOne = document.querySelector(".one");
 const projectTwo = document.querySelector(".two");
 const projectThree = document.querySelector(".three");
