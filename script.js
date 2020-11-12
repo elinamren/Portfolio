@@ -22,7 +22,7 @@ function generateSoup() {
   soupBowl.style.animation = "fill 4s ease";
   soupBowl.style.background = soup.color;
 }
-//--------------------------------------------------------------------------//
+//------------------------------------------------------------------------//
 
 // ------- N U M B E R   G A M E ------- //
 //Selectors
