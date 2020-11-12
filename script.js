@@ -160,7 +160,7 @@ closeButton.addEventListener("click", closeProjectInfo);
 about.addEventListener("click", getAboutInfo);
 
 // functions
-const phoneView = window.matchMedia("(max-width: 700px)");
+const phoneView = window.matchMedia("(max-width: 800px)");
 
 function getProjectInfo() {
   if (this == projectOne) {

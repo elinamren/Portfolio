@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Elin Amrén's portfolio as a creative Frontend Developer "
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
@@ -23,12 +28,14 @@
       <div class="bounce-canvas">
         <iframe
           frameborder="0"
+          title="blue balls bouncing"
           scrolling="no"
           class="bounce-frame web"
           src="https://editor.p5js.org/elinamren/embed/4MzH1694S"
         ></iframe>
         <iframe
           frameborder="0"
+          title="blue balls bouncing"
           scrolling="no"
           class="bounce-frame iphone"
           src="https://editor.p5js.org/elinamren/embed/mfGeQaTIX"
@@ -111,12 +118,14 @@
       </div>
       <div class="block type-something black">
         <form>
-          <input
-            type="text"
-            class="chat-input"
-            placeholder="Type something.."
-          />
-          <button class="submit-chat-button"></button>
+          <label>
+            <input
+              type="text"
+              class="chat-input"
+              placeholder="Type something.."
+            />
+          </label>
+          <button class="submit-chat-button hidden">Submit</button>
         </form>
         <div class="chat-box"></div>
       </div>
@@ -151,16 +160,25 @@
       </div>
       <div class="block contact black">
         <h4>Contact</h4>
-        <p>elinamren[@]hyperisland.se</p>
+        <p>
+          Want to talk about code or just chit chat over a coffee? Hit me up,
+          say hi!
+        </p>
+        <a class="mailto" href="mailto: elin.amren@hyperisland.se"
+          >elin.amren[@]hyperisland.se</a
+        >
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/elin-amr%C3%A9n-a48612143/">
-            <i class="fab fa-linkedin-in"></i>
+          <a
+            aria-label="linked in"
+            href="https://www.linkedin.com/in/elin-amr%C3%A9n-a48612143/"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/elinamren">
-            <i class="fab fa-github"></i>
+          <a aria-label="github" href="https://github.com/elinamren">
+            <i aria-hidden="true" class="fab fa-github"></i>
           </a>
-          <a href="https://codepen.io/elinamren">
-            <i class="fab fa-codepen"></i>
+          <a aria-label="codepen" href="https://codepen.io/elinamren">
+            <i aria-hidden="true" class="fab fa-codepen"></i>
           </a>
         </div>
       </div>
