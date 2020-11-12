@@ -19,7 +19,6 @@ generatorBtn.addEventListener("click", generateSoup);
 function generateSoup() {
   const soup = soups[Math.floor(Math.random() * soups.length)];
   generatorBtn.innerText = soup.name;
-  soupBowl.style.animation = "fill 4s ease";
   soupBowl.style.background = soup.color;
 }
 //------------------------------------------------------------------------//
