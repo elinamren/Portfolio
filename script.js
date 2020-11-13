@@ -172,7 +172,7 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "1400px";
+      popup.style.top = "1350px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "900px";
@@ -187,7 +187,7 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "2470px";
+      popup.style.top = "2420px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "1600px";
@@ -202,7 +202,7 @@ function getProjectInfo() {
     popup.classList.remove("hidden");
     visitLink.classList.remove("hidden");
     if (phoneView.matches) {
-      popup.style.top = "2900px";
+      popup.style.top = "2850px";
       popup.style.left = "5px";
     } else {
       popup.style.top = "1600px";

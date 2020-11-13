@@ -544,17 +544,25 @@ hr {
     font-size: 4.2rem;
     color: #05386b;
   }
+
   h2 {
     font-size: 1.2rem;
     width: auto;
     color: #05386b;
   }
+
+  h4 {
+    font-size: 2rem;
+  }
+
   .soup-title {
     font-size: 2rem;
   }
+
   .iphone {
     display: inline-block;
   }
+
   .web {
     display: none;
   }
@@ -564,23 +572,30 @@ hr {
     height: 350px;
   }
 
+  .star-about {
+    height: 60vh;
+  }
+
   .about {
-    padding: 1rem;
+    padding: 0.8rem;
+  }
+
+  .about-and-soup {
+    height: 42vh;
+  }
+
+  .tablet {
+    margin-top: 1rem;
   }
 
   .circle,
-  .one,
-  .about-and-soup {
+  .one {
     height: 45vh;
   }
 
-  .star-about {
-    height: 65vh;
-  }
-
   .stars {
-    width: 80%;
-    margin-left: 1rem;
+    width: 75%;
+    margin-left: 2rem;
   }
 
   .moon,
@@ -601,12 +616,15 @@ hr {
     height: 35vh;
     padding: 1rem;
   }
+
   .snow {
     height: 115px;
   }
+
   .social-links {
     padding-top: 4rem;
   }
+
   .popup {
     width: 95%;
     left: 10px;
